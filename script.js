@@ -14,6 +14,7 @@ function setTheme(theme) {
   }
   if (themeToggle) {
     themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+    themeToggle.setAttribute('aria-checked', theme === 'light' ? 'true' : 'false');
   }
   try { localStorage.setItem('theme', theme); } catch (e) {}
 }
