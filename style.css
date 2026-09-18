@@ -451,19 +451,15 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .tag-lg { font-size: 0.85rem; padding: 8px 16px; }
 
 /* EDUCATION */
-.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.edu-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 26px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.edu-top { gap: 14px; }
+.edu-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
-.edu-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
-.edu-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-.edu-degree { color: var(--accent-2); font-size: 0.92rem; }
-.edu-meta { color: var(--text-dim); font-size: 0.85rem; margin-top: 4px; }
-.edu-desc { color: var(--text-dim); font-size: 0.9rem; margin-top: 12px; }
+.edu-logo-round { border-radius: 50%; }
+.edu-top h3 { font-size: 1.08rem; font-weight: 700; }
 
 /* SKILLS */
 .skills-wrap { display: flex; flex-direction: column; gap: 28px; }
@@ -564,7 +560,6 @@ footer {
 /* RESPONSIVE */
 @media (max-width: 780px) {
   .about-grid { grid-template-columns: 1fr; }
-  .edu-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 680px) {
