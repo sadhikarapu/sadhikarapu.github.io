@@ -31,6 +31,24 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
+// ---------- About tabs (Experience / Education / Skills) ----------
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.tab;
+
+    tabButtons.forEach(b => {
+      b.classList.toggle('active', b === btn);
+      b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+    });
+    tabPanels.forEach(panel => {
+      panel.classList.toggle('active', panel.dataset.panel === target);
+    });
+  });
+});
+
 // ---------- Active nav link on scroll ----------
 const sections = document.querySelectorAll('main section[id], header#home');
 const navLinks = document.querySelectorAll('.nav-link');
