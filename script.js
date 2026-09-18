@@ -1,3 +1,30 @@
+// ---------- Theme toggle (light / dark) ----------
+const themeToggle = document.getElementById('themeToggle');
+const rootEl = document.documentElement;
+
+function currentTheme() {
+  return rootEl.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+}
+
+function setTheme(theme) {
+  if (theme === 'light') {
+    rootEl.setAttribute('data-theme', 'light');
+  } else {
+    rootEl.removeAttribute('data-theme');
+  }
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+  }
+  try { localStorage.setItem('theme', theme); } catch (e) {}
+}
+
+if (themeToggle) {
+  setTheme(currentTheme());
+  themeToggle.addEventListener('click', () => {
+    setTheme(currentTheme() === 'light' ? 'dark' : 'light');
+  });
+}
+
 // ---------- Footer year ----------
 document.getElementById('year').textContent = new Date().getFullYear();
 
