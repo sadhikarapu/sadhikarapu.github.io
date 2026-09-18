@@ -272,9 +272,8 @@ a { color: inherit; text-decoration: none; }
 .btn-sm { padding: 9px 18px; font-size: 0.88rem; margin-top: 18px; }
 
 .scroll-cue {
-  position: absolute;
-  bottom: 34px; left: 50%;
-  transform: translateX(-50%);
+  margin: 44px auto 0;
+  width: 22px;
 }
 .scroll-cue span {
   display: block;
