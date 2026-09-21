@@ -110,8 +110,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 const roles = [
   'Business Intelligence Developer',
   'Data Engineer',
-  'Analytics Specialist',
-  'Agentic AI Builder'
+  'Applied AI Engineer'
 ];
 const typedEl = document.getElementById('typedRole');
 let roleIndex = 0;
